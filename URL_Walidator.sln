@@ -5,6 +5,18 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "URL_Walidator", "URL_Walidator\URL_Walidator.vcxproj", "{E92DF0F8-BCFE-4880-AB67-433A6D5C7509}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5E0080EA-4E76-420C-B7A3-6D0A3B6B842E}"
+	ProjectSection(SolutionItems) = preProject
+		URL_Walidator\main.cpp = URL_Walidator\main.cpp
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{F047AC00-D984-4E41-9FA0-1C5D77140FC2}"
+	ProjectSection(SolutionItems) = preProject
+		URL_Walidator\InputParser.hpp = URL_Walidator\InputParser.hpp
+		URL_Walidator\OutputHandler.hpp = URL_Walidator\OutputHandler.hpp
+		URL_Walidator\Validator.hpp = URL_Walidator\Validator.hpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

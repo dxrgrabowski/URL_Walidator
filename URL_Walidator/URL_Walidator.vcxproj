@@ -127,7 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="URL_Walidator.cpp" />
+    <ClCompile Include="InputParser.cpp" />
+    <ClCompile Include="OutputHandler.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Validator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InputParser.hpp" />
+    <ClInclude Include="OutputHandler.hpp" />
+    <ClInclude Include="UI.hpp" />
+    <ClInclude Include="Validator.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
