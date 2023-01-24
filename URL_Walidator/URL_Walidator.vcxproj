@@ -128,12 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="InputParser.cpp" />
+    <ClCompile Include="Log.cpp" />
     <ClCompile Include="OutputHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Validator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputParser.hpp" />
+    <ClInclude Include="List.hpp" />
+    <ClInclude Include="Log.hpp" />
     <ClInclude Include="OutputHandler.hpp" />
     <ClInclude Include="UI.hpp" />
     <ClInclude Include="Validator.hpp" />
