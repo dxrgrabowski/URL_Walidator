@@ -5,32 +5,19 @@
 
 using namespace std;
 
-struct Url {
-	string protocol;
-	bool hasColonSlashSlash;
-	string secondLevelDomain;
-	string topLevelDomain;
-	string subdomain;
-	string path;
-	string anchor;
-	string params;
-};
 
 class Validator {
-	vector<string> workAddresses;
-	
 	Url urlParts;
 public:
 	Log logs;
 
 	Validator(vector<string> addresses) {
-		validateObtainedData(addresses);
+		isValidURL(addresses);
 	}
-	~Validator()=default;
+	~Validator() = default;
 
 	//Summarizing method
 	void isValidURL(vector<string>& addresses);
-	
 	//Checks if protocol and "://" is present and valid in URL adress http/https/ftp
 	void validateURLProtocol(string URL);
 	//Check if subdomain exists
@@ -44,5 +31,4 @@ public:
 	//Check if parameter exists
 	void validateParam(string URL);
 
-
-}
+};

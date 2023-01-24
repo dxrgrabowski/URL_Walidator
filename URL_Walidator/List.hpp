@@ -32,6 +32,8 @@ public:
 
     // Sort the contents of the list
     void sort();
+    // Iterate the contents of the list
+    void iterate();
 
 private:
     struct Node {
@@ -106,7 +108,6 @@ DoublyLinkedList<T>& DoublyLinkedList<T>::operator=(DoublyLinkedList&& rhs) noex
     }
     return *this;
 }
-
 // Add an item to the list
 template <typename T>
 void DoublyLinkedList<T>::add(const T& element) {
@@ -114,14 +115,15 @@ void DoublyLinkedList<T>::add(const T& element) {
     if (tail) {
         newNode->previous = std::move(tail);
         tail->next = std::move(newNode);
-        tail = tail->next.get();
+        tail = std::move(newNode);
     }
     else {
         head = std::move(newNode);
-        tail = head.get();
+        tail = std::move(head);
     }
     ++size;
 }
+
 
 // Search for an item in the list
 template <typename T>
@@ -152,5 +154,18 @@ void DoublyLinkedList<T>::sort() {
             std::swap(minNode->element, head.get()->element);
         }
         head = std::move(head.get()->next);
+    }
+}
+
+template <typename T>
+void DoublyLinkedList<T>::iterate() {
+    Node* node = head.get();
+    while (node) {
+        
+        for (auto& s : node->element) {
+            std::cout << s << std::endl;
+        }
+
+        node = node->next.get();
     }
 }

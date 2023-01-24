@@ -10,7 +10,8 @@ void InputParse::getDataSourceSelection() {
         getDataFromFile();
     else if (selection == 2)
         getDataFromConsole();
-    //else
+    else
+        cout << "INAPROPIATE ARGUMENT";
         // THROW EXCEPTION
 }
 void InputParse::getDataFromFile() {

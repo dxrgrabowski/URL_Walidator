@@ -11,8 +11,8 @@ private:
     int selection;
     string file_path;
     string address;
-    vector<string> addresses;
 public:
+    vector<string> addresses;
     
     InputParse() {
         getDataSourceSelection();

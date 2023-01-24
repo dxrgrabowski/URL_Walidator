@@ -2,19 +2,14 @@
 #include <string>
 #include <vector>
 #include "List.hpp"
+#include "structures.hpp"
 
 class Log {
 private:
-	DoublyLinkedList<std::vector<std::string>> logs;
-	std::vector<std::string> messages;
 public:
-	Log() {
+	std::vector<struct Url> multipleUrlInfo;
 
+	void pushLog(struct Url data) {
+		multipleUrlInfo.push_back(data);
 	}
-	void pushLog(std::vector<std::string> messages) {
-		logs.add(messages);
-	}
-	void addNewMessage(std::string message) {
-		messages.push_back(message);
-	}
-}
+};
